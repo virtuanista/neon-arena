@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NEON ARENA — PvP online</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <div id="hud" class="hidden">
+    <div id="topbar">
+      <div class="stat">PING <span id="ping">–</span></div>
+      <div class="stat">EN LÍNEA <span id="online">0</span></div>
+      <div class="stat dim">M · silenciar</div>
+    </div>
+    <div id="rightcol">
+      <div id="leaderboard">
+        <div class="lb-title">CLASIFICACIÓN</div>
+        <div id="lb-list"></div>
+      </div>
+      <div id="killfeed"></div>
+    </div>
+    <div id="hpwrap"><div id="hpfill"></div></div>
+  </div>
+
+  <div id="death" class="screen hidden">
+    <div class="death-text">ELIMINADO</div>
+    <div class="death-sub">Reapareces en <span id="death-timer">3.0</span> s</div>
+  </div>
+
+  <div id="overlay" class="screen">
+    <div class="card">
+      <h1>NEON ARENA</h1>
+      <p class="tag">Shooter PvP multijugador en tiempo real</p>
+      <input id="name" maxlength="14" placeholder="Tu nombre" autocomplete="off">
+      <button id="play">JUGAR</button>
+      <p id="status"></p>
+      <div class="help">
+        <span><b>WASD</b> moverse</span>
+        <span><b>Ratón</b> apuntar</span>
+        <span><b>Clic</b> disparar</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="shared.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
